@@ -1,13 +1,3 @@
-<?php
-	$url="localhost";
-	$usuario="root";
-	$pass="";
-	$db="negocio";
-	
-	$conexion=mysqli_connect($url,$usuario,$pass,$db) or die ("Problemas en la conexion");
-	
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,48 +17,7 @@
                 </ul>
             </nav>
 			<div id="content_area">
-				<table border="1">
-					<tr>
-						<td></td>
-						<td>Nombre</td>
-						<td>Apellido</td>
-						<td>DNI</td>
-						<td>Calle</td>
-						<td>Altura</td>
-						<td>Barrio</td>
-						<td>Localidad</td>
-						<td>Tarjeta debito</td>
-						<td>Nro mercado pago</td>
-					</tr>
-
-					<?php
-					$sql="SELECT * FROM clientes";
-					$result=mysqli_query($conexion, $sql);
-					
-					while ($mostrar=mysqli_fetch_array($result)) {
-					?>
-
-					<tr>
-						<td><?php echo $mostrar['id_cliente'] ?></td>
-						<td><?php echo $mostrar['nombre'] ?></td>
-						<td><?php echo $mostrar['apellido'] ?></td>
-						<td><?php echo $mostrar['dni'] ?></td>
-						<td><?php echo $mostrar['calle'] ?></td>
-						<td><?php echo $mostrar['altura'] ?></td>
-						<td><?php echo $mostrar['barrio'] ?></td>
-						<td><?php echo $mostrar['localidad'] ?></td>
-						<td><?php echo $mostrar['nro_tarjeta_debito'] ?></td>
-						<td><?php echo $mostrar['nro_mercado_pago'] ?></td>
-					</tr>
-
-					<?php 
-					}
-					?>
-				</table>
-
-
-				<!--
-				<h2> Insertar cliente </h2>
+				<h2> Insertar proveedor </h2>
 				<form action="insertar.php" method="post">
 					nombre <input type="text" name="nombre">
 					<br>
@@ -92,7 +41,7 @@
 					<input type="submit" value="Enviar">
 				</form>
 
-				<h2> Consultar clientes </h2>
+				<h2> Consultar proveedor </h2>
 				<form action="consultar.php" method="post">
 					<input type = "submit" value = "Consultar">
 				</form> 
@@ -107,7 +56,7 @@
 					<br>
 					<input type="submit" value = "consulta">
 				</form>
-				<h2>Eliminar cliente</h3>
+				<h2>Eliminar proveedor</h3>
 				<form action = "borrar.php">
 					Por id:  <input type="text" name = "id_cliente">
 					<br>
@@ -118,7 +67,7 @@
 					<br>
 					<input type="submit" value="Eliminar">
 				</form>
-				<h2> Actualizar cliente</h4>
+				<h2> Actualizar proveedor</h4>
 				<form action="actualizar.php" method="post">
 					<p> Ingrese el id del cliente.. </p>
 					id_cliente <input type="number" name="id_cliente"> 
@@ -145,11 +94,6 @@
 					<br>
 					<input type="submit" value="Actualizar valores">
 				</form>
-
-				-->
-
-
-
 			</div>
 			
 		</div>
