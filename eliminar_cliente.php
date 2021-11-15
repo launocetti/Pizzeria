@@ -1,18 +1,3 @@
-<?php 
-$url="localhost";
-$usuario="root";
-$pass="";
-$db="negocio";
-
-$con=mysqli_connect($url,$usuario,$pass,$db) or die ("Problemas en la conexion");
-
-$sql="insert into negocio.clientes (nombre,apellido,dni,calle,altura,barrio,localidad,nro_tarjeta_debito,nro_mercado_pago) values ('$_REQUEST[nombre]','$_REQUEST[apellido]','$_REQUEST[dni]','$_REQUEST[calle]',$_REQUEST[altura],'$_REQUEST[barrio]','$_REQUEST[localidad]','$_REQUEST[nro_tarjeta_debito]','$_REQUEST[nro_mercado_pago]')";
-
-mysqli_query($con,$sql);
-mysqli_close($con);
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,13 +16,21 @@ mysqli_close($con);
                     <li><a href="#">Insumos</a></li>
                 </ul>
             </nav>
-			
-			<br><br>
-			<form action="clientes.php" method="post">
-				<input type="submit" value = "Volver a grilla clientes">
-			</form>
-
+			<div id="content_area">
+				<h2>Eliminar Cliente</h3>
+				<form action = "borrar.php">
+					Por id:  <input type="text" name = "id_cliente">
+					<br>
+					Por nombre: <input type="text" name = "nombre">
+					<br>
+					Por apellido: <input type="text" name = "apellido">
+					<br>
+					<br>
+					<input type="submit" value="Eliminar">
+				</form>
+				
 			</div>
+			
 		</div>
 </body>
 </html>
