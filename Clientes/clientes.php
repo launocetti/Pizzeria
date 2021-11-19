@@ -13,16 +13,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><?php echo $title; ?></title>
-        <link rel="stylesheet" type="text/css" href="Styles/Stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="../Styles/Stylesheet.css" />
     </head>
     <body>
 		<div id="wrapper">
 			<div id="banner"></div>
             <nav id="navigation">
                 <ul id="nav">
-                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="../index.php">Inicio</a></li>
                     <li><a href="clientes.php">Clientes</a></li>
-                    <li><a href="proveedores.php">Distribuidores</li>
+                    <li><a href="../Proveedores/proveedores.php">Distribuidores</li>
                     <li><a href="#">Insumos</a></li>
                 </ul>
             </nav>
@@ -68,7 +68,7 @@
 				<br><br>
 
 				<h3> Consulta Cliente </h3>
-				<form action="consulta_especifica.php" method="post">
+				<form action="consulta_especifica_cliente.php" method="post">
 					Por id:  <input type="text" name = "id_cliente">
 					<br>
 					Por nombre: <input type="text" name = "nombre">
@@ -91,7 +91,7 @@
 				</form>
 
 				<h3> Actualizar Cliente </h3>
-				<form action="ce.php" method="post">
+				<form action="actualizar_cliente.php" method="post">
 					<input type="submit" value = "Actualizar">
 				</form>
 				<!--

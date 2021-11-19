@@ -1,7 +1,7 @@
 <?php
 $title = "Home";
 $content = '
-<h3>Descripcion de pizzeria o de la aplicacion</h3>
+<h3>Pizzeria</h3>
 <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lectus urna,
     viverra in luctus quis, ullamcorper quis lorem. Vestibulum vulputate pellentesque
@@ -12,7 +12,7 @@ $content = '
 </p>
 
 
-<h3>Alguna otra cosa</h3>
+<h3>Manual de usuario</h3>
 <p>
     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
     himenaeos. Donec porttitor placerat nunc a consectetur. Ut fermentum eleifend molestie.
