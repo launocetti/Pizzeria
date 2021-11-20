@@ -40,7 +40,7 @@ $resultado = mysqli_query($con,$sql);
 				<input type="submit" value = "Volver a grilla clientes">
 			</form>
 
-			</div>
+		</div>
 		</div>
 </body>
 </html>

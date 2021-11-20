@@ -25,14 +25,16 @@ mysqli_close($con);
 			<div id="banner"></div>
             <nav id="navigation">
                 <ul id="nav">
-                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="../index.php">Inicio</a></li>
                     <li><a href="clientes.php">Clientes</a></li>
                     <li><a href="proveedores.php">Distribuidores</li>
                     <li><a href="#">Insumos</a></li>
                 </ul>
             </nav>
-			<h3>Eliminado correctamente!</h3>
+
+            <h3>Ingresado correctamente!</h3>
 			<br><br>
+			
 			<form action="clientes.php" method="post">
 				<input type="submit" value = "Volver a grilla clientes">
 			</form>
