@@ -1,30 +1,52 @@
-<?php 
-$url="localhost";
-$usuario="root";
-$pass="";
-$db="negocio";
-
-$con=mysqli_connect($url,$usuario,$pass,$db) or die ("Problemas en la conexion");
-
-$sql="UPDATE negocio.clientes SET 
-      nombre = '$_REQUEST[nombre]',  
-      apellido = '$_REQUEST[apellido]',
-      dni = '$_REQUEST[dni]',
-      calle = '$_REQUEST[calle]',
-      altura = '$_REQUEST[altura]',
-      barrio = '$_REQUEST[barrio]',
-      localidad = '$_REQUEST[localidad]',
-      nro_tarjeta_debito = '$_REQUEST[nro_tarjeta_debito]',
-      nro_mercado_pago = '$_REQUEST[nro_mercado_pago]'
-      WHERE id_cliente = '$_REQUEST[id_cliente]'";
-
-$resultado = mysqli_query($con,$sql);
-
-mysqli_close($con);
-echo "<br>";
-echo "Datos actualizados correctamente";
-echo "<br>";
-echo "<br>";
-echo '<a href="http://localhost/" class="button">Volver al inicio</a>';
-
-?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title><?php echo $title; ?></title>
+        <link rel="stylesheet" type="text/css" href="../Styles/Stylesheet.css" />
+    </head>
+    <body>
+		<div id="wrapper">
+			<div id="banner"></div>
+            <nav id="navigation">
+                <ul id="nav">
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="clientes.php">Clientes</a></li>
+                    <li><a href="proveedores.php">Distribuidores</li>
+                    <li><a href="#">Insumos</a></li>
+                </ul>
+            </nav>
+			<div id="content_area">
+                  <h2> Actualizar cliente</h4>
+				<form action="actualizar.php" method="post">
+					<p> Ingrese el id del cliente.. </p>
+					id_cliente <input type="number" name="id_cliente"> 
+					<br>
+					<p> Ingrese el valor de los campos a modificar.. <p>	
+					nombre <input type="text" name="nombre">
+					<br>
+					apellido <input type="text" name="apellido">
+					<br>
+					dni <input type="number" name="dni">
+					<br>
+					calle <input type="text" name="calle">
+					<br>
+					altura <input type="text" name="altura">
+					<br>
+					barrio <input type="text" name="barrio">
+					<br>
+					localidad <input type="text" name="localidad">
+					<br>
+					nro_tarjeta_debito <input type="text" name="nro_tarjeta_debito">
+					<br>
+					nro_mercado_pago <input type="text" name="nro_mercado_pago">
+					<br>
+					<br>
+					<input type="submit" value="Actualizar valores">
+				</form>
+				
+			</div>
+			
+		</div>
+</body>
+</html>

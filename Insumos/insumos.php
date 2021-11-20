@@ -23,7 +23,7 @@
                     <li><a href="../index.php">Inicio</a></li>
                     <li><a href="clientes.php">Clientes</a></li>
                     <li><a href="../Proveedores/proveedores.php">Distribuidores</li>
-                    <li><a href="../Insumos/insumos.php">Insumos</a></li>
+                    <li><a href="insumos.php">Insumos</a></li>
                 </ul>
             </nav>
 			<div id="content_area">
@@ -67,7 +67,7 @@
 				</table>
 				<br><br>
 
-				<h3> Consulta Cliente </h3>
+				<h3> Consulta Insumos </h3>
 				<form action="consulta_especifica_cliente.php" method="post">
 					Por id:  <input type="text" name = "id_cliente">
 					<br>
@@ -80,17 +80,17 @@
 				</form>
 
 
-				<h3> Insertar Cliente </h3>
+				<h3> Insertar Insumos </h3>
 				<form action="insertar_cliente.php" method="post">
 					<input type="submit" value = "Insertar">
 				</form>
 
-				<h3> Eliminar Cliente </h3>
+				<h3> Eliminar Insumos </h3>
 				<form action="eliminar_cliente.php" method="post">
 					<input type="submit" value = "Eliminar">
 				</form>
 
-				<h3> Actualizar Cliente </h3>
+				<h3> Actualizar Insumos </h3>
 				<form action="actualizar_cliente.php" method="post">
 					<input type="submit" value = "Actualizar">
 				</form>
